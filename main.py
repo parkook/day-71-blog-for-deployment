@@ -123,6 +123,7 @@ def admin_only(f):
         # Otherwise continue with the route function
         return f(*args, **kwargs)
 
+    decorated_function.__name__ = f.__name__
     return decorated_function
 
 
